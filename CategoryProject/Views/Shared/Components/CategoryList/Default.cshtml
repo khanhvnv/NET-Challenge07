@@ -1,0 +1,10 @@
+﻿@model IEnumerable<SharedLibrary.Models.CategoryDto>
+
+@foreach (var category in Model)
+{
+    var isActive = ViewBag.CategoryId != null && ViewBag.CategoryId == category.Id ? "active-category" : "";
+    <li class="category-item" @isActive style="margin-right: 15px;">
+        <a class="nav-link text-dark" asp-action="Index" asp-controller="Home" asp-route-categoryId="@category.Id">@category.Name</a>
+        @* <a class="nav-link text-dark" href="#">@category.Name</a> *@
+    </li>
+}
