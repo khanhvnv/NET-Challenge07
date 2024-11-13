@@ -66,7 +66,6 @@ body {
   padding: 8px 15px;
   border-radius: 4px;
   color: #333;
-  font-weight: bold;
 }
 
 .category-item a:hover {
@@ -75,7 +74,7 @@ body {
 }
 
 .category-item.active-category a {
-  background-color: #007bff;
+  background-color: lightgray;
   color: white;
 }
 
@@ -141,7 +140,7 @@ body {
 
 .active-category a {
   font-weight: bold;
-  color: #007bff;
+  color: lightblue;
 }
 /* Remove vertical scrollbar */
 html, body {
