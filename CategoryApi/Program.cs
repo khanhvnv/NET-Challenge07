@@ -10,6 +10,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+/* builder.Services.AddHttpClient<CategoryService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5000");
+}); */
+
 
 var app = builder.Build();
 
@@ -27,7 +32,7 @@ app.MapGet("/api/categories", async (ApplicationDbContext context) =>
     var categories = await context.Categories.ToListAsync();
     return categories;
 })
-.WithName("GetProductss")
+.WithName("GetCategories")
 .WithOpenApi();
 
 app.MapGet("/api/products", async (ApplicationDbContext context) =>

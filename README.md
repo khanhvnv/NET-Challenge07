@@ -33,6 +33,7 @@ Open your terminal and run the following commands in your project folder:
 -	dotnet add package Microsoft.EntityFrameworkCore --version 8.0.2
 -	dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.2
 -	dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.2
+- 	dotnet add package Microsoft.AspNetCore.Mvc --version 2.2.0
 These packages will allow us to interact with SQL Server and run migrations for creating the database schema.
 
 Run the following command to install the Swagger package to use Swagger:

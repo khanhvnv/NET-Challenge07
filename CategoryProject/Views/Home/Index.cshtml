@@ -23,7 +23,7 @@
     </div> *@
     <!-- Featured Products Section -->
     <section class="featured-products">
-        <h2>Sản phẩm yêu thích</h2>        
+        <h2>Sản phẩm</h2>        
         <div class="d-flex flex-nowrap" style="gap: 1px; overflow-x: auto;"> 
         <div class="products-container">
             @if (Model != null && Model.Any())
@@ -31,7 +31,7 @@
                 @foreach (var product in Model)
                 {
                 <div class="products" style="width: 380px; height: 480px; margin-bottom: 1px;"> 
-                    <img src="@product.Images" class="product-img-top" alt="@product.Name ?? "No Image"" style="width: 100%; height: auto;" /> 
+                    <img src="@product.ImageURL" class="product-img-top" alt="@product.Name ?? "No Image"" style="width: 100%; height: auto;" /> 
                     <div class="product-item">
                         <h3>@product.Name</h3>
                         <p>@product.Description</p>

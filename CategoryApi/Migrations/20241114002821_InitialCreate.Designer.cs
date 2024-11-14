@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CategoryApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241112163522_forth Migrate to update value type for price to double  in Products data")]
-    partial class forthMigratetoupdatevaluetypeforpricetodoubleinProductsdata
+    [Migration("20241114002821_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,7 +80,7 @@ namespace CategoryApi.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Images")
+                    b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -98,7 +98,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            Images = "/images/cakes/Banh-Kem-Dau-1.jpg",
+                            ImageURL = "/images/cakes/Banh-Kem-Dau-1.jpg",
                             Name = "Bánh kem nhân dâu",
                             Price = 335000
                         },
@@ -106,7 +106,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 2,
                             CategoryId = 1,
-                            Images = "/images/cakes/Banh-Kem-Bap-1-2.jpg",
+                            ImageURL = "/images/cakes/Banh-Kem-Bap-1-2.jpg",
                             Name = "Bánh kem bắp",
                             Price = 335000
                         },
@@ -114,7 +114,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 3,
                             CategoryId = 1,
-                            Images = "/images/cakes/Banh-Kem-Thom-10-1.jpg",
+                            ImageURL = "/images/cakes/Banh-Kem-Thom-10-1.jpg",
                             Name = "Bánh kem nhân mứt",
                             Price = 335000
                         },
@@ -122,7 +122,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 4,
                             CategoryId = 2,
-                            Images = "/images/baked-cakes/sandwich-ngu-coc.jpg",
+                            ImageURL = "/images/baked-cakes/sandwich-ngu-coc.jpg",
                             Name = "Bánh mì",
                             Price = 23000
                         },
@@ -130,7 +130,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 5,
                             CategoryId = 2,
-                            Images = "/images/baked-cakes/Quy-Bo-Dau-Phong.jpg",
+                            ImageURL = "/images/baked-cakes/Quy-Bo-Dau-Phong.jpg",
                             Name = "Bánh quy",
                             Price = 25000
                         },
@@ -138,7 +138,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 6,
                             CategoryId = 2,
-                            Images = "/images/baked-cakes/Banh-Donut.jpg",
+                            ImageURL = "/images/baked-cakes/Banh-Donut.jpg",
                             Name = "Bánh donut",
                             Price = 15000
                         },
@@ -146,7 +146,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 7,
                             CategoryId = 3,
-                            Images = "/images/cold-cakes/Banh-Flan-2.jpg",
+                            ImageURL = "/images/cold-cakes/Banh-Flan-2.jpg",
                             Name = "Bánh flan",
                             Price = 12000
                         },
@@ -154,7 +154,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 8,
                             CategoryId = 3,
-                            Images = "/images/cold-cakes/banh_su_kem.jpg",
+                            ImageURL = "/images/cold-cakes/banh_su_kem.jpg",
                             Name = "Bánh su kem",
                             Price = 33000
                         },
@@ -162,7 +162,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 9,
                             CategoryId = 3,
-                            Images = "/images/cold-cakes/pudding-xoai.jpg",
+                            ImageURL = "/images/cold-cakes/pudding-xoai.jpg",
                             Name = "Pudding",
                             Price = 35000
                         },
@@ -170,7 +170,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 10,
                             CategoryId = 4,
-                            Images = "/images/ice-cream/Kem-Vani.jpg",
+                            ImageURL = "/images/ice-cream/Kem-Vani.jpg",
                             Name = "Kem vani",
                             Price = 13000
                         },
@@ -178,7 +178,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 11,
                             CategoryId = 4,
-                            Images = "/images/ice-cream/Kem-Dau-Xanh.jpg",
+                            ImageURL = "/images/ice-cream/Kem-Dau-Xanh.jpg",
                             Name = "Kem đậu xanh",
                             Price = 13000
                         },
@@ -186,7 +186,7 @@ namespace CategoryApi.Migrations
                         {
                             Id = 12,
                             CategoryId = 4,
-                            Images = "/images/ice-cream/Kem-Dau.jpg",
+                            ImageURL = "/images/ice-cream/Kem-Dau.jpg",
                             Name = "Kem dâu",
                             Price = 13000
                         });

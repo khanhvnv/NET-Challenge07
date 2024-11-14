@@ -7,7 +7,7 @@
 namespace CategoryApi.Migrations
 {
     /// <inheritdoc />
-    public partial class firsMigratetoaddProductsdata : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,8 +33,8 @@ namespace CategoryApi.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Images = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<int>(type: "int", nullable: false),
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -55,21 +55,21 @@ namespace CategoryApi.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "CategoryId", "Images", "Name", "Price" },
+                columns: new[] { "Id", "CategoryId", "ImageURL", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, 1, "/images/Banh-Kem-Dau-1.jpg", "Bánh kem nhân dâu", 335.000m },
-                    { 2, 1, "/images/Banh-Kem-Bap-1-2.jpg", "Bánh kem bắp", 335.000m },
-                    { 3, 1, "/images/Banh-Kem-Thom-10-1.jpg", "Bánh kem nhân mứt", 335.000m },
-                    { 4, 2, "/images/sandwich-ngu-coc.jpg", "Bánh mì", 23.000m },
-                    { 5, 2, "/images/Quy-Bo-Dau-Phong.jpg", "Bánh quy", 25.000m },
-                    { 6, 2, "/images/Banh-Donut.jpg", "Bánh donut", 15.000m },
-                    { 7, 3, "/images/Banh-Flan-2.jpg", "Bánh flan", 12.000m },
-                    { 8, 3, "/images/banh_su_kem.jpg", "Bánh su kem", 33.000m },
-                    { 9, 3, "/images/pudding-xoai.jpg", "Pudding", 35.000m },
-                    { 10, 4, "/images/Kem-Vani.jpg", "Kem vani", 13.000m },
-                    { 11, 4, "/images/Kem-Dau-Xanh.jpg", "Kem đậu xanh", 13.000m },
-                    { 12, 4, "/images/Kem-Dau.jpg", "Kem dâu", 13.000m }
+                    { 1, 1, "/images/cakes/Banh-Kem-Dau-1.jpg", "Bánh kem nhân dâu", 335000 },
+                    { 2, 1, "/images/cakes/Banh-Kem-Bap-1-2.jpg", "Bánh kem bắp", 335000 },
+                    { 3, 1, "/images/cakes/Banh-Kem-Thom-10-1.jpg", "Bánh kem nhân mứt", 335000 },
+                    { 4, 2, "/images/baked-cakes/sandwich-ngu-coc.jpg", "Bánh mì", 23000 },
+                    { 5, 2, "/images/baked-cakes/Quy-Bo-Dau-Phong.jpg", "Bánh quy", 25000 },
+                    { 6, 2, "/images/baked-cakes/Banh-Donut.jpg", "Bánh donut", 15000 },
+                    { 7, 3, "/images/cold-cakes/Banh-Flan-2.jpg", "Bánh flan", 12000 },
+                    { 8, 3, "/images/cold-cakes/banh_su_kem.jpg", "Bánh su kem", 33000 },
+                    { 9, 3, "/images/cold-cakes/pudding-xoai.jpg", "Pudding", 35000 },
+                    { 10, 4, "/images/ice-cream/Kem-Vani.jpg", "Kem vani", 13000 },
+                    { 11, 4, "/images/ice-cream/Kem-Dau-Xanh.jpg", "Kem đậu xanh", 13000 },
+                    { 12, 4, "/images/ice-cream/Kem-Dau.jpg", "Kem dâu", 13000 }
                 });
         }
 
